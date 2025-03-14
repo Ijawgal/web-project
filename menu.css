@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+section nav .logo img{
+   /*width: 100px;*/ 
+   cursor: pointer;
+   margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 25px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s linear;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: black;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    top: 130px;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+.menu-item{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.slides{
+    display: flex;
+    width: 300%;
+    animation: slide 10s infinite;
+}
+.slides img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+@keyframes slide {
+    0% {transform: translateX(0);}
+    33.33% {transform: translateX(-100%);}
+    66.66% {transform: translateX(-200%);}
+    100% {transform: translateX(0);}
+}
+.menu-item .info{
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item .info h5{
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+.menu-item .info p{
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+.menu-item .info p span{
+    color: #e6b800;
+    font-size: 16px;
+}
+.order-button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fac031;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+.order-button:hover{
+    background-color: #e6b800;
+}
+
+
+/*section footer{
+    background-color: black;
+}*/
+
+ section .footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+    background-color: #fff5b0;
+}
+
+section .socialicons{
+    display: flex;
+    justify-content: center;
+}
+
+section .socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+section .socialicons a i{
+    font-size: 2em;
+    color: #fac031;
+    opacity: 0.9;
+}
+
+section .socialicons a:hover{
+    color: white;
+    background-color: #fac031;
+    transition: 0.5s;
+}
+
+section .socialicons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+
+section .footerNav{
+    margin: 30px 0;
+}
+
+section .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none ;
+}
+
+section .footerNav ul li a{
+    color: #fafafa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+section .footerNav ul li a:hover{
+    opacity: 1;
+    color: #fac031;
+}
+
+section .footerbottom{
+    background-color: #fac031;
+    padding: 40px 0;
+    text-align: center;
+}
+
+section .footerbottom p{
+    color: #333;
+    bottom: 0;
+}
+
+section .Designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}

@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    min-height: 100vh;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+section nav .logo img{
+   /*width: 100px;*/ 
+   cursor: pointer;
+   margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 25px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s linear;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: black;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 20px;
+}
+
+section .main .menu-text h1{
+    font-size: 60px;
+    position: relative;
+    left: 2rem;
+    top: 0;
+}
+
+section .main .menu-text h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section .main .menu-text .main_image{
+    position: relative;
+    left: 40px;
+}
+
+section p{
+    /*width: 650px;*/
+    text-align: justify;
+    position: relative;
+    left: 3rem;
+    bottom: 100px;
+    line-height: 2rem;
+}
+
+section .main_btn{
+    background-color: #fac031;
+    position: relative;
+    left: 123px;
+    bottom: 100px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+
+section .main_btn a{
+    color: white;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main_btn i{
+    color: white;
+    transition: 0.3s linear;
+}
+
+section .main_btn:hover i{
+    transform: translateX(7px);
+}
+
+section.text-wrapped, h2{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #fac031;
+    font-size: 20px;
+    font-weight: bold;
+}
+section .text-wrapped, p{
+    display: inline;
+    /*margin-bottom: 60px;*/
+   /* margin-top: 70px;*/
+    line-height: 2rem;
+    text-align: center;
+}
+
+section.text-wrap, h2{
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    text-align: center;
+    margin-bottom: 90px;
+    margin-top: 20px;
+    color: #fac031;
+    font-size: 20px;
+    font-weight: bold;
+}
+section .text-wrap, p{
+    display: inline;
+    /*margin-bottom: 60px;*/
+   /* margin-top: 70px;*/
+    line-height: 3rem;
+    text-align: center;
+}
+
+section .video-wrap{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #fac031;
+    margin-bottom: 50px;
+}
+
+section .video-wrap h2{
+    margin-bottom: 90px;
+    margin-top: 5px;
+    line-height: 2rem;
+}
+
+section .slide-text{
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+}
+
+section .slideshow-container{
+    /*display:flex;*/
+    /*justify-content: flex-end;
+    align-items: right end;*/
+    width: 400px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+section .slides{
+    display: flex;
+    width: 600px;
+    animation: slide 16s infinite;
+}
+section .slides img{
+    width: 1000px;
+    height: 800px;
+}
+
+@keyframes slide{
+    0%{ transform: translateX(0);}
+    12.5%{ transform: translateX(-1000px);}
+    25%{ transform: translateX(-2000px);}
+    37.5%{ transform: translateX(-3000px);}
+    50%{ transform: translateX(-4000px);}
+    62.5%{ transform: translateX(-5000px);}
+    75%{ transform: translateX(-6000px);}
+    87.5%{ transform: translateX(-7000px);}
+    100%{ transform: translateX(0);}
+}
+
+section .slide-text .tagline{
+    color:#fac031;
+    font-size: 700;
+    font-weight: bolder;
+}
+
+section .text-wraping{
+    margin-top: 90px;
+    line-height: 2rem;
+}
+
+
+section footer{
+    background-color: black;
+}
+
+ section .footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+    background-color: #fff5b0;
+}
+section .socialicons{
+    display: flex;
+    justify-content: center;
+}
+section .socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+section .socialicons a i{
+    font-size: 2em;
+    color: #fac031;
+    opacity: 0.9;
+}
+section .socialicons a:hover{
+    color: white;
+    background-color: #fac031;
+    transition: 0.5s;
+}
+section .socialicons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+section .footerNav{
+    margin: 30px 0;
+}
+section .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none ;
+}
+section .footerNav ul li a{
+    color: #fafafa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+section .footerNav ul li a:hover{
+    opacity: 1;
+    color: #fac031;
+}
+section .footerbottom{
+    background-color: #fac031;
+    padding: 40px 0;
+    text-align: center;
+}
+section .footerbottom p{
+    color: #333;
+    bottom: 0;
+}
+section .Designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media only screen and (max-width: 600px) {
+    nav .logo img{
+        max-width: 30px;
+        max-height: 30px;
+        margin: 4px 0;
+    }
+    nav ul{
+        font-size: 8px;
+        gap: 4px;
+    }
+    nav .icon i{
+        flex-direction: column;
+        font-size: 8px;
+        gap: 2px;
+    }
+    p{
+        max-width: 300px;
+        word-wrap: break-word;
+    }
+}
+
+/*@media only screen and (max-width: 700px) {
+    nav .logo img{
+        max-width: 70px;
+        max-height: 70px;
+        margin: 7px 0;
+    }
+    nav ul{
+        margin: 15px;
+    }
+}*/
+
+
+@media only screen and (max-width: 600px) {
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
